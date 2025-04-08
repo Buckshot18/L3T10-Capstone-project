@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+
+    <!-- Load the project's static CSS file -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Page title displayed in the browser tab -->
+    <title>Login</title>
+
+    <!-- Additional CSS reference (if not using Django static files) -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header section displaying the page title -->
+    <h2>Login</h2>
+
+    <!-- Login form -->
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <!-- Submit button to log in the user -->
+        <button type="submit">Login</button>
+    </form>
+
+    <!-- Navigation section with a registration prompt -->
+    <div class="btn">
+        <a href="{% url 'register' %}" class="back-link">
+            Don't have an account? Register
+        </a>
+    </div>
+
+</body>
+</html>

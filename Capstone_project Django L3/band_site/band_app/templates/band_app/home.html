@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% load static %}
+    <!-- Link to the static CSS file for styling -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <title>Echo Avalanche Band site</title>
+  </head>
+  <body>
+    <!-- Main heading for the site -->
+    <h1>Welcome to The Echo Avalanche Band!</h1>
+
+    <!-- Navigation bar with links to different pages -->
+    <div class="nav">
+      <!-- Link to the 'Meet the Band' page -->
+      <a href="{% url 'members' %}">Meet the Band</a> |
+      <!-- Link to the 'Upcoming Events' page -->
+      <a href="{% url 'events' %}">Upcoming Events</a> |
+
+      <!-- Check if the user is authenticated -->
+      {% if user.is_authenticated %}
+        <!-- If authenticated, show logout link -->
+        <a href="{% url 'logout' %}">Logout</a>
+      {% else %}
+        <!-- If not authenticated, show login and register links -->
+        </div>
+        <a href="{% url 'login' %}">Login</a> |
+        <a href="{% url 'register' %}">Register</a>
+      {% endif %}
+    </div>
+  </body>
+</html>
