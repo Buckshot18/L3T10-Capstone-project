@@ -1,7 +1,7 @@
 from django.contrib import admin
 from .models import BandMember, Event
 
-# Register the BandMember model to make it accessible via the Django
+# Register the BandMember model, make it accessible via the Django
 # admin interface.
 # The BandMember model typically represents a person who is part of the
 # band. It will be managed and displayed in the admin panel.

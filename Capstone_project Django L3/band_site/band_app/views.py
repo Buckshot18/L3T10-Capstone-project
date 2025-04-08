@@ -30,7 +30,7 @@ def register(request):
     return render(request, "band_app/register.html", {"form": form})
 
 def user_login(request):
-    """Handle user login."""
+    """Handle user login"""
     if request.method == "POST":
         form = AuthenticationForm(data=request.POST)
         if form.is_valid():

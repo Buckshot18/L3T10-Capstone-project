@@ -28,7 +28,7 @@ class BandMember(models.Model):
         String representation of the BandMember object.
 
         Returns:
-            str: The name of the band member.
+            str: The name of the band member
         """
         return self.name
 

@@ -4,7 +4,7 @@ class BandAppConfig(AppConfig):
     """
     Configuration class for the 'band_app' application.
 
-    This class defines the configuration for the 'band_app' Django application,
+    This class defines the configuration for the 'band_app' Django application
     including the default settings for database fields and the app's name. It
     inherits from `AppConfig`, which allows Django to manage
     application-specific settings.
