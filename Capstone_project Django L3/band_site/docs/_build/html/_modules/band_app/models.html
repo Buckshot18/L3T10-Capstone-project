@@ -145,6 +145,31 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">title</span></div>
 </div>
 
+
+<div class="viewcode-block" id="Post">
+<a class="viewcode-back" href="../../band_app.html#band_app.models.Post">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">Post</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Represents a blog post in the application.</span>
+
+<span class="sd">    Attributes:</span>
+<span class="sd">        title (str): The title of the post, a short and descriptive string.</span>
+<span class="sd">        content (str): The main body text of the post, detailing the post&#39;s content.</span>
+<span class="sd">        published_date (date): The date on which the post is officially published.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>  <span class="c1"># Field for the title, limited to 200 characters.</span>
+    <span class="n">content</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">TextField</span><span class="p">()</span>  <span class="c1"># Field for the post content, allowing longer text.</span>
+    <span class="n">published_date</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">DateField</span><span class="p">()</span>  <span class="c1"># Field for specifying the publication date.</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns the string representation of the Post instance.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str: The title of the post.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">title</span></div>
+
 </pre></div>
 
            </div>
