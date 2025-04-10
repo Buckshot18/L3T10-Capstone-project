@@ -62,3 +62,25 @@ class Event(models.Model):
             str: The title of the event.
         """
         return self.title
+
+class Post(models.Model):
+    """
+    Represents a blog post in the application.
+
+    Attributes:
+        title (str): The title of the post, a short and descriptive string.
+        content (str): The main body text of the post, detailing the post's content.
+        published_date (date): The date on which the post is officially published.
+    """
+    title = models.CharField(max_length=200)  # Field for the title, limited to 200 characters.
+    content = models.TextField()  # Field for the post content, allowing longer text.
+    published_date = models.DateField()  # Field for specifying the publication date.
+
+    def __str__(self):
+        """
+        Returns the string representation of the Post instance.
+
+        Returns:
+            str: The title of the post.
+        """
+        return self.title
